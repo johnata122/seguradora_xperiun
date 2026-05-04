@@ -120,11 +120,11 @@ cultureInfo pt-BR
 			      ],
 			      "SemanticType": "Time"
 			    },
-			    "d_calendario.data.hierarquia_de_data": {
+			    "f_apolice.data_cancelamento.hierarquia_de_data": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_calendario",
-			          "VariationSource": "data",
+			          "ConceptualEntity": "f_apolice",
+			          "VariationSource": "data_cancelamento",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Hierarquia de datas"
 			        }
@@ -208,30 +208,30 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario.data.ano": {
+			    "d_meta_mensal.data.dia": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_calendario",
+			          "ConceptualEntity": "d_meta_mensal",
 			          "VariationSource": "data",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Ano"
+			          "HierarchyLevel": "Dia"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ano": {
+			          "dia": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data ano": {
+			          "data dia": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "information ano": {
+			          "information dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -241,7 +241,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "fact ano": {
+			          "fact dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -251,7 +251,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "info ano": {
+			          "info dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -261,7 +261,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "statistic ano": {
+			          "statistic dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -271,7 +271,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "document ano": {
+			          "document dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -281,7 +281,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "figure ano": {
+			          "figure dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -291,7 +291,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "record ano": {
+			          "record dia": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -302,104 +302,10 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario.data.trimestre": {
+			    "d_meta_mensal.data.mê": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_calendario",
-			          "VariationSource": "data",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Trimestre"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "trimestre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "data trimestre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "document trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "figure trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "record trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "d_calendario.data.mê": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "d_calendario",
+			          "ConceptualEntity": "d_meta_mensal",
 			          "VariationSource": "data",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Hierarquia de datas",
@@ -490,30 +396,30 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario.data.dia": {
+			    "d_meta_mensal.data.trimestre": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_calendario",
+			          "ConceptualEntity": "d_meta_mensal",
 			          "VariationSource": "data",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Dia"
+			          "HierarchyLevel": "Trimestre"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "dia": {
+			          "trimestre": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data dia": {
+			          "data trimestre": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "information dia": {
+			          "information trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -523,7 +429,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "fact dia": {
+			          "fact trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -533,7 +439,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "info dia": {
+			          "info trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -543,7 +449,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "statistic dia": {
+			          "statistic trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -553,7 +459,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "document dia": {
+			          "document trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -563,7 +469,7 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "figure dia": {
+			          "figure trimestre": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -573,7 +479,101 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
-			          "record dia": {
+			          "record trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        }
+			      ]
+			    },
+			    "d_meta_mensal.data.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "d_meta_mensal",
+			          "VariationSource": "data",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "fact ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "info ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "statistic ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.6
+			          }
+			        },
+			        {
+			          "document ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "figure ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "record ano": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -1298,9 +1298,6 @@ cultureInfo pt-BR
 			        }
 			      },
 			      "State": "Generated",
-			      "Visibility": {
-			        "Value": "Hidden"
-			      },
 			      "Terms": [
 			        {
 			          "uf": {
@@ -1522,7 +1519,7 @@ cultureInfo pt-BR
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "d_meta_mensal",
-			          "VariationSource": "Data",
+			          "VariationSource": "data",
 			          "VariationSet": "Variation",
 			          "Hierarchy": "Hierarquia de datas"
 			        }
@@ -1606,378 +1603,167 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_meta_mensal.data.ano": {
+			    "d_meta_mensal.data": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "d_meta_mensal",
-			          "VariationSource": "Data",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Ano"
+			          "ConceptualProperty": "data"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "ano": {
+			          "data": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data ano": {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
+			          "information": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "fact": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "info": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "statistic": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "document": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "figure": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        },
+			        {
+			          "record": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ],
+			      "SemanticType": "Time"
+			    },
+			    "d_cliente.regiao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "d_cliente",
+			          "ConceptualProperty": "regiao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "regiao": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "document ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "figure ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "record ano": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "d_meta_mensal.data.trimestre": {
+			    "d_cliente.estado": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_meta_mensal",
-			          "VariationSource": "Data",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Trimestre"
+			          "ConceptualEntity": "d_cliente",
+			          "ConceptualProperty": "estado"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "trimestre": {
+			          "estado": {
 			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "data trimestre": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "document trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "figure trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "record trimestre": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
 			          }
 			        }
 			      ]
 			    },
-			    "d_meta_mensal.data.mê": {
+			    "d_calendario.mes_abrev": {
 			      "Definition": {
 			        "Binding": {
-			          "ConceptualEntity": "d_meta_mensal",
-			          "VariationSource": "Data",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Mês"
+			          "ConceptualEntity": "d_calendario",
+			          "ConceptualProperty": "mes_abrev"
 			        }
 			      },
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "mê": {
+			          "mes abrev": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "data mê": {
-			            "State": "Generated"
+			          "me abrev": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
 			          }
 			        },
 			        {
-			          "information mê": {
+			          "mes_abrev": {
 			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Período": {
 			            "State": "Suggested",
 			            "Source": {
-			              "Agent": "Thesaurus"
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
 			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "document mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "figure mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "record mê": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        }
-			      ]
-			    },
-			    "d_meta_mensal.data.dia": {
-			      "Definition": {
-			        "Binding": {
-			          "ConceptualEntity": "d_meta_mensal",
-			          "VariationSource": "Data",
-			          "VariationSet": "Variation",
-			          "Hierarchy": "Hierarquia de datas",
-			          "HierarchyLevel": "Dia"
-			        }
-			      },
-			      "State": "Generated",
-			      "Terms": [
-			        {
-			          "dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "data dia": {
-			            "State": "Generated"
-			          }
-			        },
-			        {
-			          "information dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "fact dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "info dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "statistic dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.6
-			          }
-			        },
-			        {
-			          "document dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "figure dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
-			          }
-			        },
-			        {
-			          "record dia": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.582
+			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -2086,16 +1872,6 @@ cultureInfo pt-BR
 			            "Type": "Noun",
 			            "State": "Generated",
 			            "Weight": 0.99
-			          }
-			        },
-			        {
-			          "Produto": {
-			            "State": "Suggested",
-			            "Source": {
-			              "Type": "External",
-			              "Agent": "PowerBI.VisualColumnRename"
-			            },
-			            "Weight": 0.9
 			          }
 			        }
 			      ]
@@ -3497,6 +3273,12 @@ cultureInfo pt-BR
 			          }
 			        },
 			        {
+			          "date": {
+			            "State": "Generated",
+			            "Weight": 0.7
+			          }
+			        },
+			        {
 			          "information cancelamento": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -3566,7 +3348,8 @@ cultureInfo pt-BR
 			            "Weight": 0.582
 			          }
 			        }
-			      ]
+			      ],
+			      "SemanticType": "Time"
 			    },
 			    "f_apolice.motivo_cancelamento": {
 			      "Definition": {
@@ -4395,6 +4178,515 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "f_apolice.data_cancelamento.ano": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "f_apolice",
+			          "VariationSource": "data_cancelamento",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Ano"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data cancelamento ano": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record cancelamento ano": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "f_apolice.data_cancelamento.trimestre": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "f_apolice",
+			          "VariationSource": "data_cancelamento",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Trimestre"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data cancelamento trimestre": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record cancelamento trimestre": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "f_apolice.data_cancelamento.mê": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "f_apolice",
+			          "VariationSource": "data_cancelamento",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Mês"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data cancelamento mê": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record cancelamento mê": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "f_apolice.data_cancelamento.dia": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "f_apolice",
+			          "VariationSource": "data_cancelamento",
+			          "VariationSet": "Variation",
+			          "Hierarchy": "Hierarquia de datas",
+			          "HierarchyLevel": "Dia"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "data cancelamento dia": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "information cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "fact cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "info cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "statistic cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.609
+			          }
+			        },
+			        {
+			          "document cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "figure cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        },
+			        {
+			          "record cancelamento dia": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.591
+			          }
+			        }
+			      ]
+			    },
+			    "f_apolice.apolice_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "f_apolice",
+			          "ConceptualProperty": "apolice_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "apolice id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "apolice_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "apolice identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "apolice identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "apolice identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "apolice credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        }
+			      ]
+			    },
+			    "doc_medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Doc_Medidas"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "doc medida": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Doc_Medidas": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "doc_medida.medida": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Doc_Medidas",
+			          "ConceptualProperty": "Medida"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "medida": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "doc_medida.descricao": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Doc_Medidas",
+			          "ConceptualProperty": "Descricao"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "descricao": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "doc_medida.pasta": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Doc_Medidas",
+			          "ConceptualProperty": "Pasta"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "pasta": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
@@ -4761,20 +5053,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_mê_has_d_calendario_data_dia": {
+			    "f_apolice_data_cancelamento_mê_has_f_apolice_data_cancelamento_dia": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.mê": {
+			        "f_apolice.data_cancelamento.mê": {
 			          "Target": {
-			            "Entity": "d_calendario.data.mê"
+			            "Entity": "f_apolice.data_cancelamento.mê"
 			          }
 			        },
-			        "d_calendario.data.dia": {
+			        "f_apolice.data_cancelamento.dia": {
 			          "Target": {
-			            "Entity": "d_calendario.data.dia"
+			            "Entity": "f_apolice.data_cancelamento.dia"
 			          }
 			        }
 			      },
@@ -4782,10 +5074,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.dia"
+			              "Role": "f_apolice.data_cancelamento.dia"
 			            }
 			          },
 			          "State": "Generated",
@@ -4795,10 +5087,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.dia"
+			              "Role": "f_apolice.data_cancelamento.dia"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -4808,7 +5100,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "d_calendario.data.dia"
+			              "Role": "f_apolice.data_cancelamento.dia"
 			            },
 			            "Prepositions": [
 			              {
@@ -4818,7 +5110,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -4827,20 +5119,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_trimestre_has_d_calendario_data_mê": {
+			    "f_apolice_data_cancelamento_trimestre_has_f_apolice_data_cancelamento_mê": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.trimestre": {
+			        "f_apolice.data_cancelamento.trimestre": {
 			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
+			            "Entity": "f_apolice.data_cancelamento.trimestre"
 			          }
 			        },
-			        "d_calendario.data.mê": {
+			        "f_apolice.data_cancelamento.mê": {
 			          "Target": {
-			            "Entity": "d_calendario.data.mê"
+			            "Entity": "f_apolice.data_cancelamento.mê"
 			          }
 			        }
 			      },
@@ -4848,10 +5140,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -4861,10 +5153,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -4874,7 +5166,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            },
 			            "Prepositions": [
 			              {
@@ -4884,7 +5176,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -4893,20 +5185,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_ano_has_d_calendario_data_trimestre": {
+			    "f_apolice_data_cancelamento_ano_has_f_apolice_data_cancelamento_trimestre": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.ano": {
+			        "f_apolice.data_cancelamento.ano": {
 			          "Target": {
-			            "Entity": "d_calendario.data.ano"
+			            "Entity": "f_apolice.data_cancelamento.ano"
 			          }
 			        },
-			        "d_calendario.data.trimestre": {
+			        "f_apolice.data_cancelamento.trimestre": {
 			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
+			            "Entity": "f_apolice.data_cancelamento.trimestre"
 			          }
 			        }
 			      },
@@ -4914,10 +5206,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.ano"
+			              "Role": "f_apolice.data_cancelamento.ano"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -4927,10 +5219,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.ano"
+			              "Role": "f_apolice.data_cancelamento.ano"
 			            }
 			          },
 			          "State": "Generated",
@@ -4940,7 +5232,7 @@ cultureInfo pt-BR
 			        {
 			          "Preposition": {
 			            "Subject": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            },
 			            "Prepositions": [
 			              {
@@ -4950,7 +5242,7 @@ cultureInfo pt-BR
 			              }
 			            ],
 			            "Object": {
-			              "Role": "d_calendario.data.ano"
+			              "Role": "f_apolice.data_cancelamento.ano"
 			            }
 			          },
 			          "State": "Generated",
@@ -4959,20 +5251,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_dia": {
+			    "f_apolice_data_cancelamento_hierarquia_de_data_has_f_apolice_data_cancelamento_dia": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "f_apolice.data_cancelamento.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "f_apolice.data_cancelamento.hierarquia_de_data"
 			          }
 			        },
-			        "d_calendario.data.dia": {
+			        "f_apolice.data_cancelamento.dia": {
 			          "Target": {
-			            "Entity": "d_calendario.data.dia"
+			            "Entity": "f_apolice.data_cancelamento.dia"
 			          }
 			        }
 			      },
@@ -4980,10 +5272,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "f_apolice.data_cancelamento.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.dia"
+			              "Role": "f_apolice.data_cancelamento.dia"
 			            }
 			          },
 			          "State": "Generated",
@@ -4992,20 +5284,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_mê": {
+			    "f_apolice_data_cancelamento_hierarquia_de_data_has_f_apolice_data_cancelamento_mê": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "f_apolice.data_cancelamento.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "f_apolice.data_cancelamento.hierarquia_de_data"
 			          }
 			        },
-			        "d_calendario.data.mê": {
+			        "f_apolice.data_cancelamento.mê": {
 			          "Target": {
-			            "Entity": "d_calendario.data.mê"
+			            "Entity": "f_apolice.data_cancelamento.mê"
 			          }
 			        }
 			      },
@@ -5013,10 +5305,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "f_apolice.data_cancelamento.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.mê"
+			              "Role": "f_apolice.data_cancelamento.mê"
 			            }
 			          },
 			          "State": "Generated",
@@ -5025,20 +5317,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_trimestre": {
+			    "f_apolice_data_cancelamento_hierarquia_de_data_has_f_apolice_data_cancelamento_trimestre": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "f_apolice.data_cancelamento.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "f_apolice.data_cancelamento.hierarquia_de_data"
 			          }
 			        },
-			        "d_calendario.data.trimestre": {
+			        "f_apolice.data_cancelamento.trimestre": {
 			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
+			            "Entity": "f_apolice.data_cancelamento.trimestre"
 			          }
 			        }
 			      },
@@ -5046,10 +5338,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "f_apolice.data_cancelamento.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "f_apolice.data_cancelamento.trimestre"
 			            }
 			          },
 			          "State": "Generated",
@@ -5058,20 +5350,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_ano": {
+			    "f_apolice_data_cancelamento_hierarquia_de_data_has_f_apolice_data_cancelamento_ano": {
 			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
+			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "f_apolice.data_cancelamento.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "f_apolice.data_cancelamento.hierarquia_de_data"
 			          }
 			        },
-			        "d_calendario.data.ano": {
+			        "f_apolice.data_cancelamento.ano": {
 			          "Target": {
-			            "Entity": "d_calendario.data.ano"
+			            "Entity": "f_apolice.data_cancelamento.ano"
 			          }
 			        }
 			      },
@@ -5079,10 +5371,10 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "f_apolice.data_cancelamento.hierarquia_de_data"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.ano"
+			              "Role": "f_apolice.data_cancelamento.ano"
 			            }
 			          },
 			          "State": "Generated",
@@ -5091,53 +5383,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_data_has_hierarquia_de_data": {
-			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario.data": {
-			          "Target": {
-			            "Entity": "d_calendario.data"
-			          }
-			        },
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario.data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "data_have_hierarquia_de_data1"
-			        }
-			      ]
-			    },
-			    "f_apolice_has_d_meta_mensal": {
+			    "f_apolice_data_cancelamento_has_hierarquia_de_data": {
 			      "Binding": {
 			        "ConceptualEntity": "f_apolice"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "f_apolice": {
+			        "f_apolice.data_cancelamento": {
 			          "Target": {
-			            "Entity": "f_apolice"
+			            "Entity": "f_apolice.data_cancelamento"
 			          }
 			        },
-			        "d_meta_mensal": {
+			        "f_apolice.data_cancelamento.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_meta_mensal"
+			            "Entity": "f_apolice.data_cancelamento.hierarquia_de_data"
 			          }
 			        }
 			      },
@@ -5145,28 +5404,15 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "f_apolice"
+			              "Role": "f_apolice.data_cancelamento"
 			            },
 			            "Object": {
-			              "Role": "d_meta_mensal"
+			              "Role": "f_apolice.data_cancelamento.hierarquia_de_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "f_apolices_have_d_meta_mensal"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_meta_mensal"
-			            },
-			            "Object": {
-			              "Role": "f_apolice"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_meta_mensal_have_f_apolices"
+			          "ID": "data_cancelamentos_have_hierarquia_de_data"
 			        }
 			      ]
 			    },
@@ -5213,52 +5459,6 @@ cultureInfo pt-BR
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "d_calendarios_have_f_apolices"
-			        }
-			      ]
-			    },
-			    "f_apolice_has_d_produto": {
-			      "Binding": {
-			        "ConceptualEntity": "f_apolice"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_apolice": {
-			          "Target": {
-			            "Entity": "f_apolice"
-			          }
-			        },
-			        "d_produto": {
-			          "Target": {
-			            "Entity": "d_produto"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_apolice"
-			            },
-			            "Object": {
-			              "Role": "d_produto"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_apolices_have_d_produtos"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_produto"
-			            },
-			            "Object": {
-			              "Role": "f_apolice"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_produtos_have_f_apolices"
 			        }
 			      ]
 			    },
@@ -5354,20 +5554,20 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_cliente_has_d_regiao": {
+			    "doc_medida_has_pasta": {
 			      "Binding": {
-			        "ConceptualEntity": "d_cliente"
+			        "ConceptualEntity": "Doc_Medidas"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_cliente": {
+			        "doc_medida": {
 			          "Target": {
-			            "Entity": "d_cliente"
+			            "Entity": "doc_medida"
 			          }
 			        },
-			        "d_regiao": {
+			        "doc_medida.pasta": {
 			          "Target": {
-			            "Entity": "d_regiao"
+			            "Entity": "doc_medida.pasta"
 			          }
 			        }
 			      },
@@ -5375,28 +5575,114 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_cliente"
+			              "Role": "doc_medida"
 			            },
 			            "Object": {
-			              "Role": "d_regiao"
+			              "Role": "doc_medida.pasta"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_clientes_have_d_regiaos"
+			          "ID": "doc_medidas_have_pastas"
+			        }
+			      ]
+			    },
+			    "doc_medida_has_descricao": {
+			      "Binding": {
+			        "ConceptualEntity": "Doc_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "doc_medida": {
+			          "Target": {
+			            "Entity": "doc_medida"
+			          }
 			        },
+			        "doc_medida.descricao": {
+			          "Target": {
+			            "Entity": "doc_medida.descricao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_regiao"
+			              "Role": "doc_medida"
 			            },
 			            "Object": {
-			              "Role": "d_cliente"
+			              "Role": "doc_medida.descricao"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_regiaos_have_d_clientes"
+			          "ID": "doc_medidas_have_descricaos"
+			        }
+			      ]
+			    },
+			    "doc_medida_has_medida": {
+			      "Binding": {
+			        "ConceptualEntity": "Doc_Medidas"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "doc_medida": {
+			          "Target": {
+			            "Entity": "doc_medida"
+			          }
+			        },
+			        "doc_medida.medida": {
+			          "Target": {
+			            "Entity": "doc_medida.medida"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "doc_medida"
+			            },
+			            "Object": {
+			              "Role": "doc_medida.medida"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "doc_medidas_have_medidas"
+			        }
+			      ]
+			    },
+			    "f_apolice_has_apolice_id": {
+			      "Binding": {
+			        "ConceptualEntity": "f_apolice"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "f_apolice": {
+			          "Target": {
+			            "Entity": "f_apolice"
+			          }
+			        },
+			        "f_apolice.apolice_id": {
+			          "Target": {
+			            "Entity": "f_apolice.apolice_id"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "f_apolice"
+			            },
+			            "Object": {
+			              "Role": "f_apolice.apolice_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "f_apolices_have_apolice_ids"
 			        }
 			      ]
 			    },
@@ -6086,39 +6372,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_calendario_has_mês_abrev_": {
-			      "Binding": {
-			        "ConceptualEntity": "d_calendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.mês_abrev_": {
-			          "Target": {
-			            "Entity": "d_calendario.mês_abrev_"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.mês_abrev_"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_mês_abrev_"
-			        }
-			      ]
-			    },
 			    "f_apolice_has_entity__medida_churn_qtd": {
 			      "Binding": {
 			        "ConceptualEntity": "f_apolice"
@@ -6794,39 +7047,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "f_apolice_has_apolice_id": {
-			      "Binding": {
-			        "ConceptualEntity": "f_apolice"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "f_apolice": {
-			          "Target": {
-			            "Entity": "f_apolice"
-			          }
-			        },
-			        "f_apolice.apolice_id": {
-			          "Target": {
-			            "Entity": "f_apolice.apolice_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "f_apolice"
-			            },
-			            "Object": {
-			              "Role": "f_apolice.apolice_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "f_apolices_have_apolice_ids"
-			        }
-			      ]
-			    },
 			    "d_produto_has_descricao": {
 			      "Binding": {
 			        "ConceptualEntity": "d_produto"
@@ -7058,6 +7278,105 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
+			    "d_calendario_has_mes_abrev": {
+			      "Binding": {
+			        "ConceptualEntity": "d_calendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.mes_abrev": {
+			          "Target": {
+			            "Entity": "d_calendario.mes_abrev"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.mes_abrev"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_mes_abrevs"
+			        }
+			      ]
+			    },
+			    "d_cliente_has_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "d_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_cliente": {
+			          "Target": {
+			            "Entity": "d_cliente"
+			          }
+			        },
+			        "d_cliente.estado": {
+			          "Target": {
+			            "Entity": "d_cliente.estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_cliente"
+			            },
+			            "Object": {
+			              "Role": "d_cliente.estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_clientes_have_estado"
+			        }
+			      ]
+			    },
+			    "d_cliente_has_regiao": {
+			      "Binding": {
+			        "ConceptualEntity": "d_cliente"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_cliente": {
+			          "Target": {
+			            "Entity": "d_cliente"
+			          }
+			        },
+			        "d_cliente.regiao": {
+			          "Target": {
+			            "Entity": "d_cliente.regiao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_cliente"
+			            },
+			            "Object": {
+			              "Role": "d_cliente.regiao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_clientes_have_regiaos"
+			        }
+			      ]
+			    },
 			    "d_meta_mensal_has_data": {
 			      "Binding": {
 			        "ConceptualEntity": "d_meta_mensal"
@@ -7244,39 +7563,6 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_meta_mensal_has_meta_id": {
-			      "Binding": {
-			        "ConceptualEntity": "d_meta_mensal"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_meta_mensal": {
-			          "Target": {
-			            "Entity": "d_meta_mensal"
-			          }
-			        },
-			        "d_meta_mensal.meta_id": {
-			          "Target": {
-			            "Entity": "d_meta_mensal.meta_id"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_meta_mensal"
-			            },
-			            "Object": {
-			              "Role": "d_meta_mensal.meta_id"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_meta_mensal_have_meta_ids"
-			        }
-			      ]
-			    },
 			    "d_cliente_has_tempo_cliente_mese": {
 			      "Binding": {
 			        "ConceptualEntity": "d_cliente"
@@ -7409,7 +7695,7 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "d_cliente_has_regiao_id": {
+			    "d_cliente_has_uf": {
 			      "Binding": {
 			        "ConceptualEntity": "d_cliente"
 			      },
@@ -7420,9 +7706,9 @@ cultureInfo pt-BR
 			            "Entity": "d_cliente"
 			          }
 			        },
-			        "d_cliente.regiao_id": {
+			        "d_cliente.uf": {
 			          "Target": {
-			            "Entity": "d_cliente.regiao_id"
+			            "Entity": "d_cliente.uf"
 			          }
 			        }
 			      },
@@ -7433,12 +7719,12 @@ cultureInfo pt-BR
 			              "Role": "d_cliente"
 			            },
 			            "Object": {
-			              "Role": "d_cliente.regiao_id"
+			              "Role": "d_cliente.uf"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_clientes_have_regiao_ids"
+			          "ID": "d_clientes_have_ufs"
 			        }
 			      ]
 			    },

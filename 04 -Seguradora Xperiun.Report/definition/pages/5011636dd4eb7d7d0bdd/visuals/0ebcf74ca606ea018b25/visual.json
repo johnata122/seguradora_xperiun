@@ -23,11 +23,11 @@
                       "Entity": "d_calendario"
                     }
                   },
-                  "Property": "Mês Abrev."
+                  "Property": "mes_abrev"
                 }
               },
-              "queryRef": "d_calendario.Mês Abrev.",
-              "nativeQueryRef": "Mês Abrev.",
+              "queryRef": "d_calendario.mes_abrev",
+              "nativeQueryRef": "mes_abrev",
               "active": true
             },
             {
@@ -216,6 +216,52 @@
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "fd70d23ab51d22c139c3",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendario"
+              }
+            },
+            "Property": "data"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "8dcb28e265693c401b8e",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "_Medidas"
+              }
+            },
+            "Property": "Qtdes Apolices"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "e9740014ed10e0a0358b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "d_calendario"
+              }
+            },
+            "Property": "mes_abrev"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
   },
   "isHidden": true
 }

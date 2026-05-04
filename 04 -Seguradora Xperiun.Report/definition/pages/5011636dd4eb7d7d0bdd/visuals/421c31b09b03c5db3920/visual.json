@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "d_calendario.mes_abrev",
-              "nativeQueryRef": "mes_abrev",
-              "active": true
+              "nativeQueryRef": "Período",
+              "active": true,
+              "displayName": "Período"
             },
             {
               "field": {

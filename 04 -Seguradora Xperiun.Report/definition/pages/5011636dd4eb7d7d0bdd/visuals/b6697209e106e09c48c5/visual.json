@@ -23,12 +23,13 @@
                       "Entity": "d_calendario"
                     }
                   },
-                  "Property": "Mês Abrev."
+                  "Property": "mes_abrev"
                 }
               },
-              "queryRef": "d_calendario.Mês Abrev.",
-              "nativeQueryRef": "Mês Abrev.",
-              "active": true
+              "queryRef": "d_calendario.mes_abrev",
+              "nativeQueryRef": "Período",
+              "active": true,
+              "displayName": "Período"
             },
             {
               "field": {
