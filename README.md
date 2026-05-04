@@ -2,7 +2,7 @@
 
 > Dashbord destinado a análise de dados das operações da empresa Olist Store, o projeto contém análises no setor comercial e logístico, com objetivo de relevar insights estratégicos para o negócio"
 
-[![Dashboard Interativo](https://img.shields.io/badge/Ver%20Dashboard-Power%20BI-yellowgreen?style=for-the-badge&logo=power-bi&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiYzViYmU5ZjMtMDNiYi00NDE4LTk0YzctN2I5YzBmNGJlYmNmIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
+[![Dashboard Interativo](https://img.shields.io/badge/Ver%20Dashboard-Power%20BI-yellowgreen?style=for-the-badge&logo=power-bi&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiNzNjNjc4NjktYzY2YS00ZDIzLTlkMzgtYWVhYzFlZjMzMDZhIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
 
 ---
 
@@ -115,7 +115,7 @@ Pronto! O relatório será atualizado automaticamente, conectando-se ao arquivo 
 
 3.  **Visualização:**
     * O relatório pode ser explorado diretamente no Power BI Desktop.
-    * [![Dashboard Interativo](https://img.shields.io/badge/Ver%20Dashboard-Power%20BI-yellowgreen?style=for-the-badge&logo=power-bi&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiYzViYmU5ZjMtMDNiYi00NDE4LTk0YzctN2I5YzBmNGJlYmNmIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
+    * [![Dashboard Interativo](https://img.shields.io/badge/Ver%20Dashboard-Power%20BI-yellowgreen?style=for-the-badge&logo=power-bi&logoColor=white)](https://app.powerbi.com/view?r=eyJrIjoiNzNjNjc4NjktYzY2YS00ZDIzLTlkMzgtYWVhYzFlZjMzMDZhIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9)
     
 ## 🤝 Como Contribuir
 

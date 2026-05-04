@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.0.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "5011636dd4eb7d7d0bdd",
   "displayName": "OverView",
   "displayOption": "FitToPage",
@@ -47,6 +47,7 @@
       }
     ]
   },
+  "visibility": "HiddenInViewMode",
   "visualInteractions": [
     {
       "source": "3a84fbe10004d136a49d",
