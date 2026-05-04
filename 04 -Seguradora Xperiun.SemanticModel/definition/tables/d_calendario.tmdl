@@ -1,0 +1,131 @@
+table d_calendario
+	lineageTag: 3b64bf47-487d-4487-a63d-ed929b934bb6
+	dataCategory: Time
+
+	column data
+		dataType: dateTime
+		isKey
+		formatString: Short Date
+		lineageTag: 7abc4383-712b-4fbc-927e-230c39108064
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column ano
+		dataType: double
+		lineageTag: d03b4f40-beaa-4732-9233-78a8324e725e
+		summarizeBy: sum
+		sourceColumn: ano
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column mes
+		dataType: double
+		lineageTag: e43ee4ed-4278-4344-8193-70f8e89abdbf
+		summarizeBy: sum
+		sourceColumn: mes
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nome_mes
+		dataType: string
+		lineageTag: d4399ab2-b99c-4a9e-9496-17627617223f
+		summarizeBy: none
+		sourceColumn: nome_mes
+		sortByColumn: mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column trimestre
+		dataType: double
+		lineageTag: 771ee599-b201-4029-9033-bca763b8f82d
+		summarizeBy: sum
+		sourceColumn: trimestre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column semestre
+		dataType: double
+		lineageTag: 9b974f1d-8543-4cf8-a5ae-fd6bea69bd0c
+		summarizeBy: sum
+		sourceColumn: semestre
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column dia_semana
+		dataType: double
+		lineageTag: b42d8821-9335-4d0e-ae45-485161eba025
+		summarizeBy: sum
+		sourceColumn: dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nome_dia_semana
+		dataType: string
+		lineageTag: 396d3c19-21bb-4ab5-8ab5-99dd092b7ef9
+		summarizeBy: none
+		sourceColumn: nome_dia_semana
+
+		annotation SummarizationSetBy = Automatic
+
+	column is_fim_semana
+		dataType: double
+		lineageTag: 300779a4-425d-48ce-bc1a-bfdc52075ecd
+		summarizeBy: sum
+		sourceColumn: is_fim_semana
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column is_feriado
+		dataType: double
+		lineageTag: f9844c1f-3b41-4ebd-ae0d-eec57a5cd9fe
+		summarizeBy: sum
+		sourceColumn: is_feriado
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column mes_abrev
+		dataType: string
+		lineageTag: adb9685f-94fe-457b-b84a-e266505cdf6f
+		summarizeBy: none
+		sourceColumn: mes_abrev
+		sortByColumn: mes
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_calendario = m
+		mode: import
+		queryGroup: dimensoes
+		source =
+				let
+				    Fonte = Database{[Name = "d_calendario"]}[Data],
+				    Tipar = Table.TransformColumnTypes(Fonte,{{"data", type date}}),
+				    AddCol = Table.AddColumn(Tipar, "mes_abrev", each Text.Start([nome_mes], 3), type text)
+				in
+				    AddCol
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

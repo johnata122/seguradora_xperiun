@@ -1,0 +1,48 @@
+table 'Por Canal Vendas'
+	lineageTag: 1edde293-8a18-41c0-82c6-4ffbb4204bd7
+
+	column 'Por Canal Vendas'
+		lineageTag: 3141c27c-ac80-4281-a11d-17a69e896fc1
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Por Canal Vendas Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Por Canal Vendas Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Por Canal Vendas Campos'
+		isHidden
+		lineageTag: 8a556db6-c5bb-4cef-8d8d-f9bb38bf6610
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Por Canal Vendas Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Por Canal Vendas Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 7faaddad-77f9-4a70-ae24-d321e32c7e6f
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Por Canal Vendas' = calculated
+		mode: import
+		source =
+				{
+				    ("Canal", NAMEOF('d_canal'[nome_canal]), 0),
+				    ("tipo", NAMEOF('d_canal'[tipo]), 1)
+				}
+
+	annotation PBI_Id = 5eea31e3b450404ba96395e750a90d9c
+

@@ -1,0 +1,502 @@
+table _Medidas
+	lineageTag: 27887de6-f731-4b72-a28b-ed32df1d35e7
+
+	/// target a ser alcançado na venda
+	measure 'Receita esperada' = SUM(f_apolice[receita_esperada])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 1 - Principais
+		lineageTag: d66f6127-6c9f-417e-9191-96cf09028b14
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// Valor bruto vendido
+	measure 'Receita Realizada' = SUM(f_apolice[receita_total])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 1 - Principais
+		lineageTag: 36f7a708-3511-46af-9ae3-8f07c7d9f68f
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// Valor total de comissao dos vendedores
+	measure 'Comisão Base' = SUM(f_apolice[comissao])
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 2 - Auxiliar
+		lineageTag: a5496699-25db-49d7-839a-9307da003b8a
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// delta entre a receita prevista e realizada
+	measure 'Evasão de Receita' = [Receita esperada]-[Receita Realizada]
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 1 - Principais
+		lineageTag: 17886a22-8f9a-47df-986a-8029138ed68a
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// % de receita nao realizada vs receita total realizada
+	measure '% Evasão de Receita' = DIVIDE([Evasão de Receita],[Receita Realizada],0)
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 1 - Principais
+		lineageTag: e69cf342-bff9-4535-994c-3985a4769183
+
+	/// Quantidade de apolices canceladas em um determinado periodo
+	measure 'Churn Qtd' = ```
+			
+			CALCULATE(
+			    COUNT(f_apolice[apolice_id]),
+			    KEEPFILTERS(f_apolice[status] = "Cancelada")
+			)
+			
+			```
+		formatString: 0
+		displayFolder: 1 - Principais
+		lineageTag: 80379b62-643e-4ed0-909b-1c1c95b82143
+
+	/// receita descontando a comissao do vendedor
+	measure 'Margem Liquida' =
+			
+			SUM(f_apolice[receita_total]) - SUM(f_apolice[comissao])
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: 1 - Principais
+		lineageTag: 22c26535-fca7-4f53-890b-83597c72219c
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// Valor médio de faturamento por venda realizada
+	measure 'Ticket Medio' =
+			
+			DIVIDE(
+			    SUM(f_apolice[receita_total]),
+			    DISTINCTCOUNT(f_apolice[apolice_id])
+			)
+		formatString: "R$"\ #,0.00;-"R$"\ #,0.00;"R$"\ #,0.00
+		displayFolder: 1 - Principais
+		lineageTag: 4df77239-f0b9-4d41-a647-9d6f1282cfc0
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// Quantidade de apolices realizada
+	measure 'Qtdes Apolices' = DISTINCTCOUNT(f_apolice[apolice_id])
+		formatString: #,0
+		displayFolder: 1 - Principais
+		lineageTag: 7319c5d6-75a5-4315-803e-1ac50c7a8104
+
+	/// ilustrativo da receita total
+	measure 'imagem Var Receita Total' = ```
+			
+			
+			Var vValor = [YOY Receita %] 
+			Var vValor_Formatado = FORMAT(vValor + 0,"+0.0%;-0.0%;-")
+			
+			Var vSeta = SWITCH(
+			    TRUE(),
+			    vValor > 0, "▲",
+			    vValor < 0, "▼")
+			
+			Var vCor = SWITCH(
+			    TRUE(),
+			    vValor> 0, "#55af3b",
+			    vValor < 0,"#D16961",
+			    "#fff")
+			
+			
+			RETURN
+			
+			
+			 "data:image/svg+xml,
+			
+			 <svg width='180' height='50' viewBox='0 0 180 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			   <g id='Cart&#195;&#163;o Var'>
+			      <g clip-path='url(#clip0_29108_274)'>
+			         <rect width='180' height='50' rx='5' fill='#EEF0F1'/>
+			
+			         <text id='rot_cat' fill='#263238'
+			
+			          xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='14' letter-spacing='0em'>
+			
+			            <tspan x='81' y='44.3413'>Vs Ano Anterior</tspan>
+			         </text>
+			
+			         <text id='rot_dados'
+			          opacity='0.5' fill='"&vCor&"' fill-opacity='0.89' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='17' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='82' y='27.3447'>    "&vValor_Formatado&"    </tspan>
+			         </text>
+			
+			         <text id='seta' 
+			         
+			         opacity='0.5' fill='"&vCor&"' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='20' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='42' y='37.1770'>   "&vSeta&"    </tspan>
+			         </text>
+			      </g>
+			   </g>
+			   <defs>
+			      <clipPath id='clip0_29108_274'>
+			         <rect width='180' height='50' rx='5' fill='white'/>
+			      </clipPath>
+			   </defs>
+			</svg>"
+			```
+		displayFolder: 2 - Auxiliar
+		lineageTag: 5e04425e-c40f-4b48-9d4b-4e5c4b4c4d58
+
+	/// Receita realizada no mesmo periodo do ano anterior
+	measure 'Receita LY' = CALCULATE([Receita Realizada],SAMEPERIODLASTYEAR(d_calendario[data]))
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: 3 - Temporais
+		lineageTag: 2c068b2b-b4c8-4da1-8ea5-8b72097964e4
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// % de variação de receita %  vs ano anterior
+	measure 'YOY Receita %' = ```
+			
+			VAR Valor_last_year = [Receita LY]
+			
+			RETURN 
+			    DIVIDE(
+			        [Receita Realizada] - Valor_last_year,
+			        Valor_last_year
+			    )
+			```
+		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: 3 - Temporais
+		lineageTag: 215859c6-46ba-4dc9-b563-b287f3d5b836
+
+	/// Número de apolices no mesmo periodo do ano anterior
+	measure 'Nº Apolices LY' = CALCULATE([Qtdes Apolices],SAMEPERIODLASTYEAR(d_calendario[data]))
+		formatString: 0
+		displayFolder: 3 - Temporais
+		lineageTag: 601c1bb3-f9ff-4a88-9594-6a4009fa966f
+
+	/// % de variação de numero de apolices  vs ano anterior
+	measure 'YOY N APOLICES %' = ```
+			
+			VAR Valor_last_year = [Nº Apolices LY]
+			
+			RETURN 
+			    DIVIDE(
+			        [Qtdes Apolices] - Valor_last_year,
+			        Valor_last_year
+			    )
+			```
+		displayFolder: 3 - Temporais
+		lineageTag: 0f91e69c-31ca-4da8-8bbe-f0cd04d4c444
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// imagem para demonstrar apolices
+	measure 'imagem Var N. Apolices' = ```
+			
+			
+			Var vValor = [YOY N APOLICES %] 
+			Var vValor_Formatado = FORMAT(vValor + 0,"+0.0%;-0.0%;-")
+			
+			Var vSeta = SWITCH(
+			    TRUE(),
+			    vValor > 0, "▲",
+			    vValor < 0, "▼")
+			
+			Var vCor = SWITCH(
+			    TRUE(),
+			    vValor> 0, "#55af3b",
+			    vValor < 0,"#D16961",
+			    "#fff")
+			
+			
+			RETURN
+			
+			
+			 "data:image/svg+xml,
+			
+			 <svg width='180' height='50' viewBox='0 0 180 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			   <g id='Cart&#195;&#163;o Var'>
+			      <g clip-path='url(#clip0_29108_274)'>
+			         <rect width='180' height='50' rx='5' fill='#EEF0F1'/>
+			
+			         <text id='rot_cat' fill='#263238'
+			
+			          xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='14' letter-spacing='0em'>
+			
+			            <tspan x='81' y='44.3413'>Vs Ano Anterior</tspan>
+			         </text>
+			
+			         <text id='rot_dados'
+			          opacity='0.5' fill='"&vCor&"' fill-opacity='0.89' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='17' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='82' y='27.3447'>    "&vValor_Formatado&"    </tspan>
+			         </text>
+			
+			         <text id='seta' 
+			         
+			         opacity='0.5' fill='"&vCor&"' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='20' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='42' y='37.1770'>   "&vSeta&"    </tspan>
+			         </text>
+			      </g>
+			   </g>
+			   <defs>
+			      <clipPath id='clip0_29108_274'>
+			         <rect width='180' height='50' rx='5' fill='white'/>
+			      </clipPath>
+			   </defs>
+			</svg>"
+			```
+		displayFolder: 2 - Auxiliar
+		lineageTag: 06effa30-9560-4660-8cd0-367805004b8b
+
+	/// Ticket Médio no mesmo periodo do ano anterior
+	measure 'TM LY' = CALCULATE([Ticket Medio],SAMEPERIODLASTYEAR(d_calendario[data]))
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: 3 - Temporais
+		lineageTag: c0dc39c7-293c-41ab-b7dc-6b2b2da073df
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// % de variação de ticket médio % vs ano anterior
+	measure 'YOY TM %' = ```
+			
+			VAR Valor_last_year = [TM LY]
+			
+			RETURN 
+			    DIVIDE(
+			        [Ticket Medio] - Valor_last_year,
+			        Valor_last_year
+			    )
+			```
+		displayFolder: 3 - Temporais
+		lineageTag: f3f0113d-6f69-4a1f-b7a5-210833a4123a
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// Receita esperada no mesmo periodo do ano anterior
+	measure 'Receita esperada LY' = CALCULATE([Receita esperada],SAMEPERIODLASTYEAR(d_calendario[data]))
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: 3 - Temporais
+		lineageTag: 688def6a-d544-4ca8-8ed1-3083aa881402
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// % de variação de receita esperada vs ano anterior
+	measure 'YOY Rec. Esperado %' = ```
+			
+			VAR Valor_last_year = [Receita esperada LY]
+			
+			RETURN 
+			    DIVIDE(
+			        [Receita esperada] - Valor_last_year,
+			        Valor_last_year
+			    )
+			```
+		displayFolder: 3 - Temporais
+		lineageTag: c63c8d0b-2ada-4afc-aa08-9b83aa9e7d3f
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// evasão de receita no mesmo periodo do ano anterior
+	measure 'Evasão Receita LY' = CALCULATE([Evasão de Receita], SAMEPERIODLASTYEAR(d_calendario[data]))
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		displayFolder: 3 - Temporais
+		lineageTag: 015b8928-c893-4043-bff8-8216a6775fee
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	/// % de variação de evasão de receita vs ano anterior
+	measure 'YOY Evasão Receita %' = ```
+			
+			VAR Valor_last_year = [Evasão Receita LY]
+			
+			RETURN 
+			    DIVIDE(
+			        [Evasão de Receita] - Valor_last_year,
+			        Valor_last_year
+			    )
+			```
+		displayFolder: 3 - Temporais
+		lineageTag: 973aebb2-8f08-4037-b5dc-5f03453addf6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	/// ilustrativo do ticket medio
+	measure 'imagem Var Ticket Medio' = ```
+			
+			
+			Var vValor = [YOY TM %] 
+			Var vValor_Formatado = FORMAT(vValor + 0,"+0.0%;-0.0%;-")
+			
+			Var vSeta = SWITCH(
+			    TRUE(),
+			    vValor > 0, "▲",
+			    vValor < 0, "▼")
+			
+			Var vCor = SWITCH(
+			    TRUE(),
+			    vValor> 0, "#55af3b",
+			    vValor < 0,"#D16961",
+			    "#fff")
+			
+			
+			RETURN
+			
+			
+			 "data:image/svg+xml,
+			
+			 <svg width='180' height='50' viewBox='0 0 180 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			   <g id='Cart&#195;&#163;o Var'>
+			      <g clip-path='url(#clip0_29108_274)'>
+			         <rect width='180' height='50' rx='5' fill='#EEF0F1'/>
+			
+			         <text id='rot_cat' fill='#263238'
+			
+			          xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='14' letter-spacing='0em'>
+			
+			            <tspan x='81' y='44.3413'>Vs Ano Anterior</tspan>
+			         </text>
+			
+			         <text id='rot_dados'
+			          opacity='0.5' fill='"&vCor&"' fill-opacity='0.89' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='17' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='82' y='27.3447'>    "&vValor_Formatado&"    </tspan>
+			         </text>
+			
+			         <text id='seta' 
+			         
+			         opacity='0.5' fill='"&vCor&"' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='20' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='42' y='37.1770'>   "&vSeta&"    </tspan>
+			         </text>
+			      </g>
+			   </g>
+			   <defs>
+			      <clipPath id='clip0_29108_274'>
+			         <rect width='180' height='50' rx='5' fill='white'/>
+			      </clipPath>
+			   </defs>
+			</svg>"
+			```
+		displayFolder: 2 - Auxiliar
+		lineageTag: 56952d38-b1f6-4b8e-8492-f80bb21bcda8
+
+	/// imagem de ilustração da receita esperada
+	measure 'imagem Var Rec. Esperada' = ```
+			
+			
+			Var vValor = [YOY Rec. Esperado %] 
+			Var vValor_Formatado = FORMAT(vValor + 0,"+0.0%;-0.0%;-")
+			
+			Var vSeta = SWITCH(
+			    TRUE(),
+			    vValor > 0, "▲",
+			    vValor < 0, "▼")
+			
+			Var vCor = SWITCH(
+			    TRUE(),
+			    vValor> 0, "#55af3b",
+			    vValor < 0,"#D16961",
+			    "#fff")
+			
+			
+			RETURN
+			
+			
+			 "data:image/svg+xml,
+			
+			 <svg width='180' height='50' viewBox='0 0 180 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			   <g id='Cart&#195;&#163;o Var'>
+			      <g clip-path='url(#clip0_29108_274)'>
+			         <rect width='180' height='50' rx='5' fill='#EEF0F1'/>
+			
+			         <text id='rot_cat' fill='#263238'
+			
+			          xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='14' letter-spacing='0em'>
+			
+			            <tspan x='81' y='44.3413'>Vs Ano Anterior</tspan>
+			         </text>
+			
+			         <text id='rot_dados'
+			          opacity='0.5' fill='"&vCor&"' fill-opacity='0.89' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='17' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='82' y='27.3447'>    "&vValor_Formatado&"    </tspan>
+			         </text>
+			
+			         <text id='seta' 
+			         
+			         opacity='0.5' fill='"&vCor&"' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='20' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='42' y='37.1770'>   "&vSeta&"    </tspan>
+			         </text>
+			      </g>
+			   </g>
+			   <defs>
+			      <clipPath id='clip0_29108_274'>
+			         <rect width='180' height='50' rx='5' fill='white'/>
+			      </clipPath>
+			   </defs>
+			</svg>"
+			```
+		displayFolder: 2 - Auxiliar
+		lineageTag: 7ae78ccd-6802-4bff-af09-854d4cc8c433
+
+	/// icone para representar evasão de receita
+	measure 'imagem Var Evasão Receita' = ```
+			
+			
+			Var vValor = [YOY Evasão Receita %] 
+			Var vValor_Formatado = FORMAT(vValor + 0,"+0.0%;-0.0%;-")
+			
+			Var vSeta = SWITCH(
+			    TRUE(),
+			    vValor > 0, "▲",
+			    vValor < 0, "▼")
+			
+			Var vCor = SWITCH(
+			    TRUE(),
+			    vValor> 0, "#55af3b",
+			    vValor < 0,"#D16961",
+			    "#fff")
+			
+			
+			RETURN
+			
+			
+			 "data:image/svg+xml,
+			
+			 <svg width='180' height='50' viewBox='0 0 180 50' fill='none' xmlns='http://www.w3.org/2000/svg'>
+			   <g id='Cart&#195;&#163;o Var'>
+			      <g clip-path='url(#clip0_29108_274)'>
+			         <rect width='180' height='50' rx='5' fill='#EEF0F1'/>
+			
+			         <text id='rot_cat' fill='#263238'
+			
+			          xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='14' letter-spacing='0em'>
+			
+			            <tspan x='81' y='44.3413'>Vs Ano Anterior</tspan>
+			         </text>
+			
+			         <text id='rot_dados'
+			          opacity='0.5' fill='"&vCor&"' fill-opacity='0.89' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='17' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='82' y='27.3447'>    "&vValor_Formatado&"    </tspan>
+			         </text>
+			
+			         <text id='seta' 
+			         
+			         opacity='0.5' fill='"&vCor&"' xml:space='preserve' style='white-space: pre' font-family='Scheherazade' font-size='20' font-weight='bold' letter-spacing='0em'>
+			            <tspan x='42' y='37.1770'>   "&vSeta&"    </tspan>
+			         </text>
+			      </g>
+			   </g>
+			   <defs>
+			      <clipPath id='clip0_29108_274'>
+			         <rect width='180' height='50' rx='5' fill='white'/>
+			      </clipPath>
+			   </defs>
+			</svg>"
+			```
+		displayFolder: 2 - Auxiliar
+		lineageTag: 219b44e3-de27-4159-a659-3f8e7c3348e5
+
+	partition _Medidas = m
+		mode: import
+		source =
+				let
+				    Fonte = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [#"Coluna 1" = _t]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(Fonte,{{"Coluna 1", type text}}),
+				    #"Colunas Removidas" = Table.RemoveColumns(#"Tipo Alterado",{"Coluna 1"})
+				in
+				    #"Colunas Removidas"
+
+	annotation PBI_ResultType = Table
+

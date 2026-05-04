@@ -1,0 +1,43 @@
+model Model
+	culture: pt-BR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: pt-BR
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+queryGroup Parametros
+
+	annotation PBI_QueryGroupOrder = 0
+
+queryGroup fatos
+
+	annotation PBI_QueryGroupOrder = 1
+
+queryGroup dimensoes
+
+	annotation PBI_QueryGroupOrder = 2
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Database","dir_db","d_calendario","d_canal","d_cliente","d_meta_mensal","d_produto","f_apolice","_Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table d_calendario
+ref table DateTableTemplate_74870dd6-e7ef-4dac-acb2-912bc5805db9
+ref table d_canal
+ref table d_cliente
+ref table d_meta_mensal
+ref table d_produto
+ref table f_apolice
+ref table LocalDateTable_dfdb5ef4-bf97-41f2-821d-476fc9bed7cd
+ref table _Medidas
+ref table 'Por Canal Vendas'
+ref table 'Receita (R$)'
+ref table LocalDateTable_55695160-2518-49fb-b28b-045763bd3451
+ref table LocalDateTable_253bab1a-a39e-425e-bc1c-ff6b268de569
+ref table Doc_Medidas
+
+ref cultureInfo pt-BR
+

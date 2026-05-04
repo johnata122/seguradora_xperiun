@@ -1,0 +1,80 @@
+table d_produto
+	lineageTag: b831e386-482e-4e3b-a57f-d301ac19945a
+
+	column produto_id
+		dataType: double
+		lineageTag: f29fa8c7-395f-40cd-a17c-4dba5bdb7879
+		summarizeBy: sum
+		sourceColumn: produto_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nome_produto
+		dataType: string
+		lineageTag: 3b3b08bd-cfa0-4476-ad2b-2c5afe2bce2d
+		summarizeBy: none
+		sourceColumn: nome_produto
+
+		annotation SummarizationSetBy = Automatic
+
+	column ramo
+		dataType: string
+		lineageTag: a5fce2ad-c37f-4875-8a33-1aaa364654bc
+		summarizeBy: none
+		sourceColumn: ramo
+
+		annotation SummarizationSetBy = Automatic
+
+	column cobertura
+		dataType: string
+		lineageTag: 302d6ffe-18fb-45d5-8165-ab32309f8bec
+		summarizeBy: none
+		sourceColumn: cobertura
+
+		annotation SummarizationSetBy = Automatic
+
+	column premio_medio_mensal
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 5b865f29-2b87-4953-8a88-3427ae9ed38c
+		summarizeBy: sum
+		sourceColumn: premio_medio_mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column franquia_media
+		dataType: double
+		lineageTag: bb889143-7e30-4ef6-9c44-dabf56164a5c
+		summarizeBy: sum
+		sourceColumn: franquia_media
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column descricao
+		dataType: string
+		lineageTag: 7b1b79a4-b929-4d8d-8d63-855c980fa944
+		summarizeBy: none
+		sourceColumn: descricao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_produto = m
+		mode: import
+		queryGroup: dimensoes
+		source =
+				let
+				    Fonte = Database{[Name = "d_produto"]}[Data],
+				    RemoveCols = Table.RemoveColumns(Fonte,{"f_apolice"})
+				in
+				    RemoveCols
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

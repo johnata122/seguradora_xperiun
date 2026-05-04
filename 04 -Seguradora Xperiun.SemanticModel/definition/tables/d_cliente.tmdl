@@ -1,0 +1,84 @@
+table d_cliente
+	lineageTag: 4f598471-9967-45f7-ac3a-1a5f77b8bd8b
+
+	column cliente_id
+		dataType: double
+		lineageTag: 0298d962-5220-404b-82f9-c6a0e80e38c8
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column uf
+		dataType: string
+		lineageTag: f86fc02c-5be4-42d3-93cc-729f012d3f9d
+		summarizeBy: none
+		sourceColumn: uf
+
+		annotation SummarizationSetBy = Automatic
+
+	column faixa_etaria
+		dataType: string
+		lineageTag: 053a33d4-61de-472c-8033-2c519dedba8d
+		summarizeBy: none
+		sourceColumn: faixa_etaria
+
+		annotation SummarizationSetBy = Automatic
+
+	column genero
+		dataType: string
+		lineageTag: e8643959-807b-4300-acba-635711405f21
+		summarizeBy: none
+		sourceColumn: genero
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_cliente
+		dataType: string
+		lineageTag: dd418b6d-52bf-4df7-87c0-08eb15a2dbf5
+		summarizeBy: none
+		sourceColumn: tipo_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_cliente_meses
+		dataType: double
+		lineageTag: 6c835c95-9dd6-4842-897c-5d4d53c0e334
+		summarizeBy: none
+		sourceColumn: tempo_cliente_meses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column estado
+		dataType: string
+		lineageTag: 58b1240d-f1db-4267-aadf-90807b06031d
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column regiao
+		dataType: string
+		lineageTag: 02ec07e4-97c5-41a5-9a6b-4d13800ac67a
+		summarizeBy: none
+		sourceColumn: regiao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition d_cliente = m
+		mode: import
+		queryGroup: dimensoes
+		source =
+				let
+				    Fonte = Database{[Name = "vw_clientes"]}[Data]
+				in
+				    Fonte
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

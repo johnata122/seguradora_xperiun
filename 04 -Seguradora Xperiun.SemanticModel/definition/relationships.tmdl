@@ -1,0 +1,27 @@
+relationship e138ced9-1ef0-4459-9712-40ecab886a24
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_apolice.data_fim_prevista
+	toColumn: LocalDateTable_dfdb5ef4-bf97-41f2-821d-476fc9bed7cd.Date
+
+relationship AutoDetected_4067daaf-8c59-4ad8-84a0-d9dd9354a289
+	fromColumn: f_apolice.canal_id
+	toColumn: d_canal.canal_id
+
+relationship AutoDetected_aababe48-433f-479a-aef4-b5273b1a3e18
+	fromColumn: f_apolice.cliente_id
+	toColumn: d_cliente.cliente_id
+
+relationship c827ed90-12d4-d1a6-13fc-faece4243303
+	fromColumn: f_apolice.data_inicio
+	toColumn: d_calendario.data
+
+relationship b5c81a3c-3753-4166-a25a-794a614a23a0
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_meta_mensal.data
+	toColumn: LocalDateTable_55695160-2518-49fb-b28b-045763bd3451.Date
+
+relationship 6ea85f74-9fe9-4fde-8886-0bfd7ee35be8
+	joinOnDateBehavior: datePartOnly
+	fromColumn: f_apolice.data_cancelamento
+	toColumn: LocalDateTable_253bab1a-a39e-425e-bc1c-ff6b268de569.Date
+

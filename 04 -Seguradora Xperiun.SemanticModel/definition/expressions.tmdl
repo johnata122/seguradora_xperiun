@@ -1,0 +1,20 @@
+expression dir_db = "C:\Users\johnata.silva\Downloads\seguradora_xperiun.db" meta [IsParameterQuery=true, Type="Any", IsParameterQueryRequired=true]
+	lineageTag: 8550ce30-a607-4c70-b325-a138cf9e7c04
+	queryGroup: Parametros
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Text
+
+expression Database =
+		let
+		    Fonte = Odbc.DataSource("driver={SQLite3 ODBC Driver};database="& dir_db &";dsn=SQLite Datasource", [HierarchicalNavigation=true])
+		in
+		    Fonte
+	lineageTag: 83333d47-8f18-4ea3-9562-dd71d467c6a0
+	queryGroup: Parametros
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

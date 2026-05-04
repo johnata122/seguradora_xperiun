@@ -1,0 +1,65 @@
+table d_meta_mensal
+	lineageTag: 7c59a7bd-85bf-4e1d-b994-3924971c566d
+
+	column meta_novas_apolices
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 9fbc30f6-0455-4f62-84f1-27b8129aa01a
+		summarizeBy: sum
+		sourceColumn: meta_novas_apolices
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column meta_receita_premios
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 69a98b6e-e1f6-4fa0-9109-104f8eed6951
+		summarizeBy: sum
+		sourceColumn: meta_receita_premios
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column meta_taxa_churn
+		dataType: double
+		lineageTag: b88d4bef-b59c-4825-b351-52c36d50f9ae
+		summarizeBy: sum
+		sourceColumn: meta_taxa_churn
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: f096c50d-41fc-4feb-a0c7-0b3ee81e73ff
+		summarizeBy: none
+		sourceColumn: data
+
+		variation Variation
+			isDefault
+			relationship: b5c81a3c-3753-4166-a25a-794a614a23a0
+			defaultHierarchy: LocalDateTable_55695160-2518-49fb-b28b-045763bd3451.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition d_meta_mensal = m
+		mode: import
+		queryGroup: dimensoes
+		source =
+				let
+				    Fonte = Database{[Name = "vw_meta_mensal"]}[Data],
+				    Tipar = Table.TransformColumnTypes(Fonte,{{"data", type date}})
+				in
+				    Tipar
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

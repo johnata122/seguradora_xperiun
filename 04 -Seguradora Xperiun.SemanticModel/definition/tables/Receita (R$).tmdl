@@ -1,0 +1,48 @@
+table 'Receita (R$)'
+	lineageTag: 444272ae-503a-4982-9080-f0801047411e
+
+	column 'Receita (R$)'
+		lineageTag: 83f126a7-8474-4ccf-8f43-b6e3dae1c277
+		summarizeBy: none
+		sourceColumn: [Value1]
+		sortByColumn: 'Receita (R$) Pedido'
+
+		relatedColumnDetails
+			groupByColumn: 'Receita (R$) Campos'
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita (R$) Campos'
+		isHidden
+		lineageTag: d92a8e5e-ebf2-475d-95a4-f5e4b546c656
+		summarizeBy: none
+		sourceColumn: [Value2]
+		sortByColumn: 'Receita (R$) Pedido'
+
+		extendedProperty ParameterMetadata =
+				{
+				  "version": 3,
+				  "kind": 2
+				}
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Receita (R$) Pedido'
+		isHidden
+		formatString: 0
+		lineageTag: 3146d642-4f13-421d-b257-3a225acfa46b
+		summarizeBy: sum
+		sourceColumn: [Value3]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Receita (R$)' = calculated
+		mode: import
+		source =
+				{
+				    ("tipo cliente", NAMEOF('d_cliente'[tipo_cliente]), 0),
+				    ("genero", NAMEOF('d_cliente'[genero]), 1)
+				}
+
+	annotation PBI_Id = 21012b111fa74d42bc6eb117f0a724dc
+

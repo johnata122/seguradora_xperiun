@@ -1,0 +1,44 @@
+table Doc_Medidas
+	lineageTag: 6397d5af-ba59-4198-95df-0cb94afa374a
+
+	column Medida
+		lineageTag: 9cc57854-3ec7-4a34-bfd0-874c9153249a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Medida]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Descricao
+		lineageTag: 66d7e5ed-8623-4839-ab4f-8001677158c3
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Descricao]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Pasta
+		lineageTag: 459b0743-4670-47e3-be4d-9bfbaef2e423
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Pasta]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Doc_Medidas = calculated
+		mode: import
+		source = ```
+				
+				VAR _Select = 
+				SELECTCOLUMNS(
+				    INFO.VIEW.MEASURES(),
+				    "Medida", [Name],
+				    "Descricao", [Description],
+				    "Pasta", [DisplayFolder]
+				)
+				
+				RETURN _Select
+				```
+
+	annotation PBI_Id = 83550b3cc8d1462cb3f2095b49987c06
+

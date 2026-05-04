@@ -1,0 +1,178 @@
+table f_apolice
+	lineageTag: 99535e46-4f60-463f-b138-6b257c011ae5
+
+	column cliente_id
+		dataType: double
+		lineageTag: 337284b1-e8c6-4153-91b1-337289872427
+		summarizeBy: none
+		sourceColumn: cliente_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column canal_id
+		dataType: double
+		lineageTag: 077c5ce7-41ce-487b-acf8-f1be740efe8a
+		summarizeBy: none
+		sourceColumn: canal_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column data_inicio
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: ba694cb2-2474-4ab3-80a6-a22a92fc9b47
+		summarizeBy: none
+		sourceColumn: data_inicio
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column data_fim_prevista
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d9bd3cf3-12db-4030-81b7-d9288bf7248c
+		summarizeBy: none
+		sourceColumn: data_fim_prevista
+
+		variation Variation
+			isDefault
+			relationship: e138ced9-1ef0-4459-9712-40ecab886a24
+			defaultHierarchy: LocalDateTable_dfdb5ef4-bf97-41f2-821d-476fc9bed7cd.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column vigencia_meses
+		dataType: double
+		lineageTag: 86169cfe-e742-4a0e-a082-e3b3e50ca622
+		summarizeBy: sum
+		sourceColumn: vigencia_meses
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column premio_mensal
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 0edfca9f-9514-43cd-bddf-292b405ccc80
+		summarizeBy: sum
+		sourceColumn: premio_mensal
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column parcelas_pagas
+		dataType: double
+		lineageTag: a79d8d2b-6347-4a4d-a6e3-d536cc714095
+		summarizeBy: sum
+		sourceColumn: parcelas_pagas
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column receita_total
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 71bf5a29-1f36-4a06-8ce5-d498cef0b5f7
+		summarizeBy: sum
+		sourceColumn: receita_total
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column receita_esperada
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 125655fc-35e3-4951-a09b-98c4fd98b59f
+		summarizeBy: sum
+		sourceColumn: receita_esperada
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column comissao
+		dataType: double
+		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
+		lineageTag: 98772974-0f8b-409a-a4f5-63b164171063
+		summarizeBy: sum
+		sourceColumn: comissao
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"pt-BR"}
+
+	column forma_pagamento
+		dataType: string
+		lineageTag: 7e88564a-d45a-43db-a847-a3704136f7e2
+		summarizeBy: none
+		sourceColumn: forma_pagamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column status
+		dataType: string
+		lineageTag: 885e13f1-4e09-453b-817d-f1fff7747720
+		summarizeBy: none
+		sourceColumn: status
+
+		annotation SummarizationSetBy = Automatic
+
+	column data_cancelamento
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 01835801-8363-4fab-bd8c-e648289df31c
+		summarizeBy: none
+		sourceColumn: data_cancelamento
+
+		variation Variation
+			isDefault
+			relationship: 6ea85f74-9fe9-4fde-8886-0bfd7ee35be8
+			defaultHierarchy: LocalDateTable_253bab1a-a39e-425e-bc1c-ff6b268de569.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column motivo_cancelamento
+		dataType: string
+		lineageTag: f0dcec9e-eda1-46e6-9e74-b0f7bd070eb1
+		summarizeBy: none
+		sourceColumn: motivo_cancelamento
+
+		annotation SummarizationSetBy = Automatic
+
+	column apolice_id
+		dataType: double
+		lineageTag: 8ee518ac-4872-4358-9f20-7d3f830c15cb
+		summarizeBy: sum
+		sourceColumn: apolice_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition f_apolice = m
+		mode: import
+		queryGroup: fatos
+		source =
+				let
+				    Fonte = Database{[Name = "vw_apolice"]}[Data],
+				    Tipar = Table.TransformColumnTypes(Fonte,{{"data_inicio", type date}, {"data_fim_prevista", type date}, {"data_cancelamento", type date}})
+				in
+				    Tipar
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

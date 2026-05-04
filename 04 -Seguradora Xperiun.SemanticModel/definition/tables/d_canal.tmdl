@@ -1,0 +1,53 @@
+table d_canal
+	lineageTag: 2d0ed40f-ac59-4297-aeb3-c88609799dad
+
+	column canal_id
+		dataType: double
+		lineageTag: 9dda5151-13c1-40cf-a37c-428884fb5f97
+		summarizeBy: none
+		sourceColumn: canal_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column nome_canal
+		dataType: string
+		lineageTag: dafbdf07-f924-442c-8b43-b3c7e4f3244a
+		summarizeBy: none
+		sourceColumn: nome_canal
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo
+		dataType: string
+		lineageTag: a47f4c41-5132-4d34-a45b-a6884c8c36ff
+		summarizeBy: none
+		sourceColumn: tipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column comissao_percentual
+		dataType: double
+		lineageTag: cbd7cc9f-0fc1-4530-b650-3a10162ce93f
+		summarizeBy: none
+		sourceColumn: comissao_percentual
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition d_canal = m
+		mode: import
+		queryGroup: dimensoes
+		source =
+				let
+				    Fonte = Database{[Name = "d_canal"]}[Data],
+				    RemoveCols = Table.RemoveColumns(Fonte,{"f_apolice"})
+				in
+				    RemoveCols
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

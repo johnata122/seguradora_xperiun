@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "04 -Seguradora Xperiun"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "577765c2-962b-485d-9c0e-017df37b18cd"
+  }
+}
