@@ -4,7 +4,7 @@
     {
       "ordinal": 0,
       "scrollPosition": {
-        "x": 580,
+        "x": 0,
         "y": 0
       },
       "nodes": [
@@ -49,7 +49,7 @@
         },
         {
           "location": {
-            "x": 642.8594630416361,
+            "x": 705.71660589877888,
             "y": 0
           },
           "nodeIndex": "d_meta_mensal",
@@ -68,7 +68,7 @@
           "nodeIndex": "d_produto",
           "nodeLineageTag": "b831e386-482e-4e3b-a57f-d301ac19945a",
           "size": {
-            "height": 173,
+            "height": 270.14285714285711,
             "width": 234
           },
           "zIndex": 4

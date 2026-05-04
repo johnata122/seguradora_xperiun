@@ -16,13 +16,12 @@ table d_calendario
 
 	column ano
 		dataType: double
+		formatString: 0
 		lineageTag: d03b4f40-beaa-4732-9233-78a8324e725e
 		summarizeBy: sum
 		sourceColumn: ano
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column mes
 		dataType: double

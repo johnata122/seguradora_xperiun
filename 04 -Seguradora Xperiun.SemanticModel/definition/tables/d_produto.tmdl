@@ -4,7 +4,7 @@ table d_produto
 	column produto_id
 		dataType: double
 		lineageTag: f29fa8c7-395f-40cd-a17c-4dba5bdb7879
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: produto_id
 
 		annotation SummarizationSetBy = Automatic
@@ -39,7 +39,7 @@ table d_produto
 		dataType: double
 		formatString: "R$"\ #,0.###############;-"R$"\ #,0.###############;"R$"\ #,0.###############
 		lineageTag: 5b865f29-2b87-4953-8a88-3427ae9ed38c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: premio_medio_mensal
 
 		annotation SummarizationSetBy = Automatic
@@ -49,7 +49,7 @@ table d_produto
 	column franquia_media
 		dataType: double
 		lineageTag: bb889143-7e30-4ef6-9c44-dabf56164a5c
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: franquia_media
 
 		annotation SummarizationSetBy = Automatic

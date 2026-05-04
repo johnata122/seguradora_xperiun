@@ -35,9 +35,9 @@ ref table LocalDateTable_dfdb5ef4-bf97-41f2-821d-476fc9bed7cd
 ref table _Medidas
 ref table 'Por Canal Vendas'
 ref table 'Receita (R$)'
-ref table LocalDateTable_55695160-2518-49fb-b28b-045763bd3451
 ref table LocalDateTable_253bab1a-a39e-425e-bc1c-ff6b268de569
 ref table Doc_Medidas
+ref table LocalDateTable_8d7763e2-d3b0-46d0-a2b0-1eed07519803
 
 ref cultureInfo pt-BR
 

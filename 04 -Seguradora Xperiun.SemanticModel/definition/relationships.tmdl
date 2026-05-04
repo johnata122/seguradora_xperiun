@@ -15,13 +15,21 @@ relationship c827ed90-12d4-d1a6-13fc-faece4243303
 	fromColumn: f_apolice.data_inicio
 	toColumn: d_calendario.data
 
-relationship b5c81a3c-3753-4166-a25a-794a614a23a0
-	joinOnDateBehavior: datePartOnly
-	fromColumn: d_meta_mensal.data
-	toColumn: LocalDateTable_55695160-2518-49fb-b28b-045763bd3451.Date
-
 relationship 6ea85f74-9fe9-4fde-8886-0bfd7ee35be8
 	joinOnDateBehavior: datePartOnly
 	fromColumn: f_apolice.data_cancelamento
 	toColumn: LocalDateTable_253bab1a-a39e-425e-bc1c-ff6b268de569.Date
+
+relationship 6047d806-4b85-4faa-b386-7902a47beb7e
+	joinOnDateBehavior: datePartOnly
+	fromColumn: d_meta_mensal.data
+	toColumn: LocalDateTable_8d7763e2-d3b0-46d0-a2b0-1eed07519803.Date
+
+relationship 179be939-d293-8b53-f9aa-4b90e0dce4e9
+	fromColumn: d_calendario.data
+	toColumn: d_meta_mensal.data
+
+relationship AutoDetected_b215fe41-a233-4417-b262-f6ca088023aa
+	fromColumn: f_apolice.produto_id
+	toColumn: d_produto.produto_id
 

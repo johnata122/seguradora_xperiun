@@ -23,32 +23,18 @@
                       "Entity": "d_calendario"
                     }
                   },
-                  "Property": "data"
+                  "Property": "ano"
                 }
               },
-              "queryRef": "d_calendario.data.Variation.Hierarquia de datas.Ano",
-              "nativeQueryRef": "data Ano",
-              "active": true
+              "queryRef": "d_calendario.ano",
+              "nativeQueryRef": "Ano",
+              "active": true,
+              "displayName": "Ano"
             }
           ]
         }
       },
       "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "d_calendario"
-                  }
-                },
-                "Property": "data"
-              }
-            },
-            "direction": "Ascending"
-          }
-        ],
         "isDefaultSort": true
       }
     },
@@ -74,8 +60,8 @@
                 "Version": 2,
                 "From": [
                   {
-                    "Name": "l",
-                    "Entity": "LocalDateTable_b8bb076a-fcdf-41d2-94ae-dcace8142c40",
+                    "Name": "d",
+                    "Entity": "d_calendario",
                     "Type": 0
                   }
                 ],
@@ -88,10 +74,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Source": "l"
+                                  "Source": "d"
                                 }
                               },
-                              "Property": "Ano"
+                              "Property": "ano"
                             }
                           }
                         ],
@@ -99,7 +85,7 @@
                           [
                             {
                               "Literal": {
-                                "Value": "2021L"
+                                "Value": "2025D"
                               }
                             }
                           ]

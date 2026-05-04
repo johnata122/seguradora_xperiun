@@ -162,6 +162,16 @@ table f_apolice
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	column produto_id
+		dataType: double
+		lineageTag: 5eb151f4-5037-4cd2-a1ed-a3f6534f2f9f
+		summarizeBy: none
+		sourceColumn: produto_id
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition f_apolice = m
 		mode: import
 		queryGroup: fatos
