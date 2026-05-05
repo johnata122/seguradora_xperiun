@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
   "name": "ac578d83024dde562238",
   "position": {
     "x": 80,
@@ -771,10 +771,45 @@
                   "Value": "true"
                 }
               }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
             }
           },
           "selector": {
             "metadata": "_Medidas.Qtdes Apolices"
+          }
+        },
+        {
+          "properties": {
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Ticket Medio"
+          }
+        },
+        {
+          "properties": {
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "_Medidas.Receita esperada"
           }
         }
       ],
@@ -1120,7 +1155,7 @@
             "size": {
               "expr": {
                 "Literal": {
-                  "Value": "43L"
+                  "Value": "36L"
                 }
               }
             },
@@ -1237,7 +1272,7 @@
             "size": {
               "expr": {
                 "Literal": {
-                  "Value": "42L"
+                  "Value": "36L"
                 }
               }
             }
